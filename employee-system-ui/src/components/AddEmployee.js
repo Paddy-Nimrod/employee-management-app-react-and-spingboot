@@ -12,6 +12,16 @@ const AddEmployee = () => {
 
   const navigate = useNavigate();
 
+  const reset = (e) => {
+    e.preventDefault();
+    setEmployee({
+      id: "",
+      firstName: "",
+      lastName: "",
+      emailId: "",
+    });
+  };
+
   const handleChange = (e) => {
     const value = e.target.value;
     setEmployee({ ...employee, [e.target.name]: value });
@@ -79,7 +89,10 @@ const AddEmployee = () => {
           >
             Save
           </button>
-          <button className="rounded text-white font-semibold bg-red-400 py-2 px-6 hover:bg-red-700">
+          <button
+            onClick={reset}
+            className="rounded text-white font-semibold bg-red-400 py-2 px-6 hover:bg-red-700"
+          >
             Clear
           </button>
         </div>
