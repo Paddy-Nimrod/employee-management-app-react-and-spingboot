@@ -28,7 +28,7 @@ const EmployeeList = () => {
       .then((response) => {
         if (employees) {
           setEmployees((prevState) => {
-            return prevState.filter((employee) => employee.id !== id);
+            return prevState.filter((employee) => employee.EmployeeId !== id);
           });
         }
       })

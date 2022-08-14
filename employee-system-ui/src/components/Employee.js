@@ -18,7 +18,7 @@ const Employee = ({ employee, deleteEmployee }) => {
         </a>
         <a
           onClick={(e, id) => {
-            deleteEmployee(e, id);
+            deleteEmployee(e, employee.id);
           }}
           className=" text-indigo-600 hover:text-indigo-800 hover:cursor-pointer "
         >
